@@ -1,0 +1,104 @@
+.superior {
+    background-color: #ec7404;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 15vh;
+}
+
+.img_logo img {
+    max-height: 10vh;
+}
+
+.img_botao{
+    border-radius: 3px;
+}
+
+.img_botao_seta{
+    cursor: pointer;
+    border-radius: 3px;
+}
+
+.body {
+    position: relative;
+}
+
+.body h2 {
+    position: absolute;
+    right: 0%;
+    top: 10%;
+    left: 0%;
+    bottom: 0;
+    color: #231d19;
+    font-family: "ItauDisplay-XBold", "Myriad Pro", Arial;
+    font-weight: bold;
+    font-style: italic;
+}
+
+.body .vitrine img {
+    border-radius: 3px;
+    position: absolute;
+    right: 0%;
+    top: 10%;
+    left: 50%;
+    bottom: 0;
+    height: 70%;
+    width: 20%;
+}
+
+.form {
+    width: 15vw;
+    margin-left: 50%;
+    display: flex;
+}
+
+.form input {
+    height: 5vh;
+    width: 7vw;
+    text-align: center;
+    border-radius: 3px;
+    margin-left: 1%;
+    border: #ffffff;
+}
+
+.form img {
+    margin-left: 2%;
+}
+
+
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 5%;
+}
+
+.footer_text {
+    margin-top: 5%;
+}
+
+
+.vitrine {
+    padding-bottom: 30%;
+    border: white;
+    background-repeat: no-repeat;
+}
+
+.footer a {
+    text-align: center;
+}
+
+.footer a img{
+    border-radius: 3px;
+    height: 70%;
+    width: 70%;
+}
+
+
+h2 {
+    font-size: 150%;
+    line-height: 100%;
+    font-family: "ItauDisplay-XBold", "Myriad Pro", Arial;
+    margin-bottom: 8px;
+    margin-left: 12%;
+}

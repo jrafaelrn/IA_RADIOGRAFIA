@@ -1,0 +1,17 @@
+[
+  {
+    "id_exame": "1245as",
+    "nome_img": "radiografia_helena",
+    "extensao": "png"
+  },
+  {
+    "id_exame": "1111as",
+    "nome_img": "radiografia_maria",
+    "extensao": "jpg"
+  },
+  {
+    "id_exame": "1145as",
+    "nome_img": "radiografia_mario",
+    "extensao": "jpg"
+  }
+]

@@ -1,0 +1,27 @@
+<app-header  [icone] = 'icone' [title]='title'></app-header>
+
+<body>
+    <div class="form">
+        <mat-card>
+            <mat-card-content>
+                <form [formGroup]="form">
+                    <mat-form-field>
+                        <input matInput type="text" placeholder="Digite o CPF do paciente" formControlName="cpf">
+                    </mat-form-field>
+                    <mat-form-field appearance="fill">
+                        <mat-label>Observações</mat-label>
+                        <textarea matInput formControlName="observacao"></textarea>
+                      </mat-form-field>
+                </form>
+            </mat-card-content>
+            <mat-card-actions>
+                <button mat-raised-button color="primary" (click)="onEnviarEmail()">Enviar por e-mail</button>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+        <div class="foto_diag"
+            style="background-image: url('../../../assets/radio2.png')">
+        </div>
+</body>
+
+<app-footer></app-footer>

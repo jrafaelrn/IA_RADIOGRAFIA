@@ -1,0 +1,66 @@
+<body>
+    <div class="superior">
+        <div class="img_logo">
+            <img class="img_responsivo" src="../../assets/decera_logo.png">
+        </div>
+        <div class="form">
+            <form [formGroup]="form">
+                <input matInput type="text" placeholder="CRM" formControlName="agencia">
+            </form>
+            <img *ngIf="this.form.value.agencia.length < 6 || this.form.value.agencia.length > 6" class="img_botao"
+                src="../assets/cadeado.png">
+            <img *ngIf="this.form.value.agencia.length == 6" class="img_botao_seta" src="../assets/seta.png"
+                (click)="onSubmit()">
+        </div>
+    </div>
+
+    <div class="body">
+        <h2>Chega de demora, <br>
+            pensamos na entrega rápida <br>
+            e qualidade no exame.
+        </h2>
+        <div class="vitrine">
+            <div *ngIf="this.contador == 0">
+                <img class="img_responsivo" src="../../assets/radio1.png">
+            </div>
+
+            <div *ngIf="this.contador == 1">
+                <img class="img_responsivo" src="../../assets/radio2.png">
+            </div>
+        </div>
+    </div>
+
+    <div class="footer_completo">
+        <div class="footer_text">
+            <h2>serviços e técnicas usadas</h2>
+        </div>
+        <div class="footer">
+
+            <a
+                href="https://www.infopedia.pt/apoio/artigos/$contraste-(fotografia)#:~:text=Num%20programa%20de%20edi%C3%A7%C3%A3o%20de,mais%20difusas%20na%20imagem%20geral.">
+                <img class="img_responsivo" src="../../assets/contraste.png">
+                <h5 id="img11">Constraste</h5>
+            </a>
+
+            <a href="https://pt.wikipedia.org/wiki/Filtro_Sobel">
+                <img class="img_responsivo" src="../../assets/sobel.png">
+                <h5 id="img12">Filtro Sobel</h5>
+            </a>
+
+            <a href="https://www.tensorflow.org/?hl=pt-br">
+                <img class="img_responsivo" src="../../assets/tensor_flow.png">
+                <h5 id="img13">TensorFlow</h5>
+            </a>
+
+            <a href="https://spark.apache.org/">
+                <img class="img_responsivo" src="../../assets/spark.png">
+                <h5 id="img14">PySpark</h5>
+            </a>
+
+            <a href="https://www.postgresql.org/">
+                <img class="img_responsivo" src="../../assets/postgreSQL.png">
+                <h5 id="img15">PostgreSQL</h5>
+            </a>
+        </div>
+    </div>
+</body>

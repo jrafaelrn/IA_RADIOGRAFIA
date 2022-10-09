@@ -1,0 +1,30 @@
+body {
+    display: flex;
+    align-items: flex-start;
+}
+
+mat-form-field {
+    width: 100%;
+}
+
+mat-card {
+    max-width: 80%;
+    margin: 2em auto;
+    text-align: center;
+}
+
+.div_foto {
+    margin: 1%;
+    text-align: center;
+}
+
+.foto {
+    border: 1px solid;
+    height: 300px;
+    width: 200px;
+}
+
+.div_foto button {
+    border: 1px solid;
+    margin-top: 1%;
+}

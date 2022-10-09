@@ -1,0 +1,17 @@
+[
+  {
+    "id_exame": "1245as",
+    "cpf": "400207954",
+    "observacao": "Encontrado corpo estranho X"
+  },
+  {
+    "id_exame": "1111as",
+    "cpf": "400207954",
+    "observacao": "Encontrado corpo estranho Y"
+  },
+  {
+    "id_exame": "1145as",
+    "cpf": "400207954",
+    "observacao": "Encontrado corpo estranho Z"
+  }
+]

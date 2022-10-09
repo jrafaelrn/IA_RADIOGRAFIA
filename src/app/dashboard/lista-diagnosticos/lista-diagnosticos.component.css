@@ -1,0 +1,16 @@
+table {
+    width: 100%;
+}
+
+mat-toolbar {
+    background-color: #ec7404;
+    color: #ffffff;
+}
+
+.loading-spinner {
+    padding: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.15);
+}

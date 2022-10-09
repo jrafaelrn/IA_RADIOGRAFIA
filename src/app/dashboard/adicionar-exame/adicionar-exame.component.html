@@ -1,0 +1,26 @@
+<app-header [icone]='icone' [title]='title'></app-header>
+
+<body>
+        <mat-card>
+            <mat-card-content>
+                <form [formGroup]="form">
+                    <mat-form-field>
+                        <input matInput type="number" placeholder="Digite o CPF do paciente" formControlName="cpf">
+                    </mat-form-field>
+                    <mat-form-field>
+                        <mat-label>imagem</mat-label>
+                        <mat-select formControlName="caminho_img">
+                            <mat-option value="masculino">png</mat-option>
+                            <mat-option value="feminino">jpg</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </form>
+            </mat-card-content>
+
+            <mat-card-actions>
+                <button mat-raised-button color="primary" (click)="onSubmit()">Salvar</button>
+                <button mat-raised-button color="warn" (click)="onCancel()">Cancelar</button>
+            </mat-card-actions>
+        </mat-card>
+</body>
+<app-footer></app-footer>

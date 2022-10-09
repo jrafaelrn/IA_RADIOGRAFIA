@@ -1,0 +1,38 @@
+<mat-toolbar class="header mat-elevation-z4">
+  <span>
+    <a>
+      <img class="logo" src="../../../assets/decera_logo.png" alt="logo">
+    </a>
+  </span>
+  <span class="title-group">
+    <a>
+      <i class="material-icons">
+        {{ icone }}
+      </i>
+      {{ title }}
+    </a>
+  </span>
+  <button mat-button color="primary" (click)="onSubmit('login')">sair</button>
+
+</mat-toolbar>
+
+
+<button mat-button (click)="onSubmit('dashboard')">home</button>
+
+<button mat-button [matMenuTriggerFor]="aboveMenu">paciente</button>
+<mat-menu #aboveMenu="matMenu" yPosition="above">
+  <button mat-menu-item (click)="onSubmit('dashboard/cadastrar-paciente')">cadastrar paciente</button>
+  <button mat-menu-item (click)="onSubmit('dashboard/lista-pacientes')">listagem de pacientes</button>
+</mat-menu>
+
+<button mat-button [matMenuTriggerFor]="belowMenu">exame</button>
+<mat-menu #belowMenu="matMenu" yPosition="below">
+  <button mat-menu-item (click)="onSubmit('dashboard/lista-exames')">listagem de exames</button>
+  <button mat-menu-item (click)="onSubmit('dashboard/adicionar-exame')">adicionar exame</button>
+</mat-menu>
+
+<button mat-button [matMenuTriggerFor]="beforeMenu">diagnóstico</button>
+<mat-menu #beforeMenu="matMenu" xPosition="before">
+  <button mat-menu-item (click)="onSubmit('dashboard/lista-diagnosticos')">listagem de diagnósticos</button>
+  <button mat-menu-item (click)="onSubmit('dashboard/cadastrar-diagnostico')">cadastrar diagnóstico</button>
+</mat-menu>

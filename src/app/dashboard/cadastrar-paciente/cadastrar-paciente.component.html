@@ -1,0 +1,50 @@
+<app-header [icone]='icone' [title]='title'></app-header>
+
+<body>
+    <div class="div_foto">
+        <div class="foto"
+            style="background-image: url('https://i.pinimg.com/474x/8d/ee/de/8deede6888af1f1be092c160e76a77f0.jpg')">
+        </div>
+        <div><button mat-button>upload</button></div>
+    </div>
+    <div class="form">
+        <mat-card>
+            <mat-card-content>
+
+                <form [formGroup]="form">
+                    <mat-form-field>
+                        <input matInput type="text" placeholder="Digite o nome do paciente" formControlName="nome">
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input matInput type="number" placeholder="Digite o CPF do paciente" formControlName="cpf">
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input matInput type="text" placeholder="Digite o Endereço do paciente"
+                            formControlName="endereco">
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input matInput type="number" placeholder="Digite o número da residência"
+                            formControlName="numero">
+                    </mat-form-field>
+                    <mat-form-field>
+                        <input matInput type="number" placeholder="(11) 99999-9999" formControlName="telefone">
+                    </mat-form-field>
+                    <mat-form-field>
+                        <mat-label>sexo</mat-label>
+                        <mat-select formControlName="sexo">
+                            <mat-option value="masculino">masculino</mat-option>
+                            <mat-option value="feminino">feminino</mat-option>
+                        </mat-select>
+                    </mat-form-field>
+                </form>
+            </mat-card-content>
+
+            <mat-card-actions>
+                <button mat-raised-button color="primary" (click)="onSubmit()">Salvar</button>
+                <button mat-raised-button color="warn" (click)="onCancel()">Cancelar</button>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+</body>
+
+<app-footer></app-footer>

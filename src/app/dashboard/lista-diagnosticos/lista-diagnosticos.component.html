@@ -1,0 +1,38 @@
+<app-header [icone]='icone' [title]='title'></app-header>
+
+<body>
+    <mat-card>
+        <mat-toolbar> Diagnósticos Disponíveis</mat-toolbar>
+
+        <div *ngIf="diagnosticos$ | async as diagnosticos; else loading">
+            <table mat-table [dataSource]="diagnosticos" class="mat-elevation-z8">
+
+                <ng-container matColumnDef="id_exame">
+                    <th mat-header-cell *matHeaderCellDef> Id </th>
+                    <td mat-cell *matCellDef="let diagnostico"> {{ diagnostico.id_exame }} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="cpf">
+                    <th mat-header-cell *matHeaderCellDef> CPF </th>
+                    <td mat-cell *matCellDef="let diagnostico"> {{ diagnostico.cpf }} </td>
+                </ng-container>
+
+                <ng-container matColumnDef="observacao">
+                    <th mat-header-cell *matHeaderCellDef> Observação </th>
+                    <td mat-cell *matCellDef="let diagnostico"> {{ diagnostico.observacao }} </td>
+                </ng-container>
+
+                <tr mat-header-row *matHeaderRowDef="['id_exame', 'cpf', 'observacao']"></tr>
+                <tr mat-row *matRowDef="let diagnostico; columns: ['id_exame', 'cpf', 'observacao']"></tr>
+            </table>
+        </div>
+
+        <ng-template #loading>
+            <div class="loading-spinner">
+                <mat-spinner color="primary"></mat-spinner>
+            </div>
+        </ng-template>
+
+    </mat-card>
+</body>
+<app-footer></app-footer>

@@ -1,0 +1,83 @@
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/*menores que 480px*/
+.mat-typography h2 {
+    font-size: 12px;
+}
+
+.mat-typography p {
+    font-size: 10px;
+}
+
+.mat-typography .img_responsivo {
+    height: 100%;
+    width: 100%;
+}
+
+.mat-typography .logo {
+    max-width: 40px;
+}
+
+.mat-typography .foto {
+    height: 100px;
+    width: 70px;
+}
+
+.mat-typography .foto_diag{
+    height: 200px;
+    width: 200px;
+}
+
+/*480px - 768px = tablet*/
+@media (min-width: 480px) {
+    .mat-typography h2 {
+        font-size: 16px;
+    }
+
+    .mat-typography p {
+        font-size: 12px;
+    }
+
+}
+
+/*768px - 1024px = telas menores, laptops*/
+@media (min-width: 768px) {
+    .mat-typography h2 {
+        font-size: 18px;
+    }
+
+    .mat-typography p {
+        font-size: 14px;
+    }
+}
+
+/*1024px - 1200px = desktop*/
+@media (min-width: 1024px) {
+
+    .mat-typography h2 {
+        font-size: 22px;
+    }
+
+    .mat-typography p {
+        font-size: 18px;
+    }
+}
+
+/*1200px e + = telas maiores, tvs*/
+@media (min-width: 1200px) {
+    .mat-typography h2 {
+        font-size: 26px;
+    }
+
+    .mat-typography p {
+        font-size: 22px;
+    }
+}

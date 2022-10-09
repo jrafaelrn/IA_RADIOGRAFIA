@@ -1,0 +1,27 @@
+
+[
+    { 
+     "cpf": "400207954",
+     "nome": "Lucas Lima",
+     "endereco": "Rua do arajá",
+     "numero": 32,
+     "telefone": 11965454578,
+     "sexo": "masculino"
+    },
+    { 
+     "cpf": "400207954",
+     "nome": "Rose Silva",
+     "endereco": "Rua do maria",
+     "numero": 12,
+     "telefone": 11700454578,
+      "sexo": "feminino"
+    },
+    { 
+     "cpf": "400207954",
+     "nome": "Jon Nilsen",
+     "endereco": "Rua do Carlos de Andrade",
+     "numero": 5,
+     "telefone": 11965454578,
+     "sexo": "masculino"
+    }
+]

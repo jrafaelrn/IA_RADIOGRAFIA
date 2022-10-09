@@ -1,0 +1,29 @@
+body {
+   height: 60vh;
+   display: flex;
+   align-items: center;
+   justify-content: space-evenly;
+   margin: 0;
+}
+
+mat-form-field {
+    width: 100%;
+    margin-top: 20%;
+}
+
+mat-card {
+    max-width: 80%;
+    margin: 2em auto;
+    text-align: center;
+}
+
+div.form {
+    height: 400px;
+    width: 275px;
+}
+
+div.foto_diag{
+    height: 400px;
+    width: 400px;
+    border: 1px solid;
+}
