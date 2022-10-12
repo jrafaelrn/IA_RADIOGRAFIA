@@ -53,23 +53,14 @@ body {
 }
 
 .mat-typography .form .img_botao {
-    height: 20px;
+    height: 52px;
 }
 
 .mat-typography .form .img_botao_seta {
-    height: 20px;
+    height: 52px;
 }
 
-@media (min-height: 480px){
 
-    .mat-typography .form .img_botao {
-        height: 27px;
-    }
-    
-    .mat-typography .form .img_botao_seta {
-        height: 27px;
-    }
-}
 
 /*480px - 768px = tablet*/
 @media (min-width: 480px) {
@@ -81,18 +72,6 @@ body {
         font-size: 12px;
     }
 
-}
-
-
-@media (min-height: 768px){
-
-    .mat-typography .form .img_botao {
-        height: 42px;
-    }
-    
-    .mat-typography .form .img_botao_seta {
-        height: 42px;
-    }
 }
 
 /*768px - 1024px = telas menores, laptops*/
@@ -128,17 +107,6 @@ body {
 
 }
 
-
-@media (min-height: 1024px){
-
-    .mat-typography .form .img_botao {
-        height: 56px;
-    }
-    
-    .mat-typography .form .img_botao_seta {
-        height: 56px;
-    }
-}
 
 /*1024px - 1200px = desktop*/
 @media (min-width: 1024px) {
