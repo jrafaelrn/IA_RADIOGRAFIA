@@ -9,6 +9,7 @@ import { ServiceService } from './services/service.service';
 import { LoginComponent } from './login/login.component';
 import { SharedModule } from './shared/SharedModule';
 import { AppMaterialModule } from './shared/app-material/app-material.module';
+import { DashboardModule } from './dashboard/dashboard.module';
 
 
 @NgModule({
@@ -22,7 +23,8 @@ import { AppMaterialModule } from './shared/app-material/app-material.module';
     BrowserAnimationsModule,
     HttpClientModule,
     SharedModule,
-    AppMaterialModule
+    AppMaterialModule,
+    DashboardModule
   ],
   providers: [ServiceService],
   bootstrap: [AppComponent]

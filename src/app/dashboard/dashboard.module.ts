@@ -34,6 +34,7 @@ import { AppMaterialModule } from '../shared/app-material/app-material.module';
     DashboardRoutingModule,
     SharedModule,
     AppMaterialModule
-  ]
+  ],
+  exports: [FooterComponent]
 })
 export class DashboardModule { }
