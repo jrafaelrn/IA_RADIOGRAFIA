@@ -60,6 +60,11 @@ body {
     height: 48px;
 }
 
+.mat-typography .superior form input {
+    width: 100px;
+}
+
+
 
 
 /*480px - 768px = tablet*/
@@ -104,6 +109,11 @@ body {
         height: 30%;
     }
 
+    .mat-typography .img_responsivo {
+        height: 100%;
+        width: 100%;
+    }
+
 
 }
 
@@ -123,6 +133,11 @@ body {
         margin-top: 3%;
     }
 
+    .mat-typography .img_responsivo {
+        height: 100%;
+        width: 100%;
+    }
+
 }
 
 /*1200px e + = telas maiores, tvs*/
@@ -138,5 +153,12 @@ body {
     .mat-typography .footer_completo .footer {
         margin-top: 1%;
     }
+
+    .mat-typography .img_responsivo {
+        height: 100%;
+        width: 100%;
+    }
     
 }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

@@ -14,6 +14,7 @@ import { ListaDiagnosticosComponent } from './lista-diagnosticos/lista-diagnosti
 import { AdicionarExameComponent } from './adicionar-exame/adicionar-exame.component';
 import { SharedModule } from '../shared/SharedModule';
 import { AppMaterialModule } from '../shared/app-material/app-material.module';
+import { UploadFileComponent } from './upload-file/upload-file.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { AppMaterialModule } from '../shared/app-material/app-material.module';
     ListaPacientesComponent,
     ListaExamesComponent,
     ListaDiagnosticosComponent,
-    AdicionarExameComponent
+    AdicionarExameComponent,
+    UploadFileComponent
   ],
   imports: [
     CommonModule,

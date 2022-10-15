@@ -2,22 +2,19 @@
     background-color: #ec7404;
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
     height: 15vh;
 }
 
 .img_logo img {
-    max-height: 10vh;
+    max-height: 40px;
 }
 
-.img_botao{
-    border-radius: 3px;
+.superior button {
+    border: 1px solid #ffffff;
+    color: #ffffff;
 }
 
-.img_botao_seta{
-    cursor: pointer;
-    border-radius: 3px;
-}
 
 .body {
     position: relative;
@@ -61,9 +58,7 @@
     border: #ffffff;
 }
 
-.form img {
-    margin-left: 2%;
-}
+
 
 
 .footer {

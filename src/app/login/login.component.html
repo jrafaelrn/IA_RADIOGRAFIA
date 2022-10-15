@@ -7,10 +7,7 @@
             <form [formGroup]="form">
                 <input matInput type="text" placeholder="CRM" formControlName="agencia">
             </form>
-            <img *ngIf="this.form.value.agencia.length < 6 || this.form.value.agencia.length > 6" class="img_botao"
-                src="../assets/cadeado.png">
-            <img *ngIf="this.form.value.agencia.length == 6" class="img_botao_seta" src="../assets/seta.png"
-                (click)="onSubmit()">
+            <button mat-stroked-button (click) = "onSubmit()">Entrar</button>
         </div>
     </div>
 
