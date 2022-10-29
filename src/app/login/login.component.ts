@@ -22,8 +22,7 @@ export class LoginComponent implements OnInit {
     private service: ServiceService, 
     private router: Router) {
     this.form = this.formBuilder.group({
-      agencia: [''],
-      conta: ['']
+      crm: ['']
     });
 
     this.tempoRotacaoImagem();
