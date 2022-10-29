@@ -81,6 +81,10 @@ body {
         font-size: 12px;
     }
 
+    .mat-typography .form {
+        margin-right: 0%;
+    }
+
 }
 
 /*768px - 1024px = telas menores, laptops*/
