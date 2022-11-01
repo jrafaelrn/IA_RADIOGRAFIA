@@ -15,6 +15,9 @@ import { AdicionarExameComponent } from './adicionar-exame/adicionar-exame.compo
 import { SharedModule } from '../shared/SharedModule';
 import { AppMaterialModule } from '../shared/app-material/app-material.module';
 import { UploadFileComponent } from './upload-file/upload-file.component';
+import { NgxMaskModule, IConfig  } from 'ngx-mask';
+
+export const options: Partial<null|IConfig> | (() => Partial<IConfig>) = null;
 
 
 @NgModule({
@@ -35,7 +38,9 @@ import { UploadFileComponent } from './upload-file/upload-file.component';
     CommonModule,
     DashboardRoutingModule,
     SharedModule,
-    AppMaterialModule
+    AppMaterialModule,
+    NgxMaskModule.forRoot(),
+
   ],
   exports: [FooterComponent]
 })

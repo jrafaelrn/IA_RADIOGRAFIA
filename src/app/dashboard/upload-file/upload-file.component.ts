@@ -1,5 +1,5 @@
 import { HttpClient, HttpEventType, HttpProgressEvent } from '@angular/common/http';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Output } from '@angular/core';
 import { environment } from 'src/environments/environment';
 
 @Component({
@@ -12,7 +12,6 @@ export class UploadFileComponent implements OnInit {
   mensagem: string = '';
   nomeArquivo: string = '';
 
-
   constructor(private httpClient: HttpClient) { }
 
   ngOnInit(): void { }
@@ -23,13 +22,14 @@ export class UploadFileComponent implements OnInit {
 
     if (arquivoSelecionado) {
       //this.uploadArquivo(arquivoSelecionado);
+      console.log(arquivoSelecionado);
     }
   }
 
 
   private uploadArquivo(arquivoSelecionado: File) {
     const formData = new FormData();
-    formData.append("file", arquivoSelecionado);
+    formData.append("foto", arquivoSelecionado);
     this.httpClient.post(environment.url, formData, {
 
       reportProgress: true,

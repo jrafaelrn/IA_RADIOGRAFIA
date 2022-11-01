@@ -10,6 +10,8 @@ import { ListaExamesComponent } from './lista-exames/lista-exames.component';
 import { ListaPacientesComponent } from './lista-pacientes/lista-pacientes.component';
 import { ResultadoComponent } from './resultado/resultado.component';
 
+
+
 const routes: Routes = [
   {path: '', component: DashboardComponent},
   {path: 'resultado', component: ResultadoComponent},
@@ -22,7 +24,8 @@ const routes: Routes = [
 ];
 
 @NgModule({
-  imports: [RouterModule.forChild(routes)],
+  imports: [
+    RouterModule.forChild(routes)  ],
   exports: [RouterModule]
 })
 export class DashboardRoutingModule { }

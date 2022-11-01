@@ -3,7 +3,7 @@
 <body>
     <div class="div_foto">
         <div class="foto"
-            style="background-image: url('https://i.pinimg.com/474x/8d/ee/de/8deede6888af1f1be092c160e76a77f0.jpg')">
+            style="background-image: url('{{ file }}')">
         </div>
         <app-upload-file></app-upload-file>    
     </div>
@@ -16,7 +16,7 @@
                         <input matInput type="text" placeholder="Digite o nome do paciente" formControlName="nome">
                     </mat-form-field>
                     <mat-form-field>
-                        <input matInput type="number" placeholder="Digite o CPF do paciente" formControlName="cpf">
+                        <input matInput type="text" placeholder="Digite o CPF do paciente" formControlName="cpf" mask="000.000.000-00">
                     </mat-form-field>
                     <mat-form-field>
                         <input matInput type="text" placeholder="Digite o Endereço do paciente"
@@ -27,7 +27,7 @@
                             formControlName="numero">
                     </mat-form-field>
                     <mat-form-field>
-                        <input matInput type="number" placeholder="(11) 99999-9999" formControlName="telefone">
+                        <input matInput type="tel" placeholder="(11) 99999-9999" formControlName="telefone" mask="(00) 00000-0000">
                     </mat-form-field>
                     <mat-form-field>
                         <mat-label>sexo</mat-label>

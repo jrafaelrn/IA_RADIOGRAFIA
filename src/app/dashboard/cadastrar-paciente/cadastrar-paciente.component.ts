@@ -1,5 +1,5 @@
-import { Component, OnInit, Output } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { Component, Input, OnInit, Output } from '@angular/core';
+import { UntypedFormBuilder, UntypedFormGroup } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Location } from '@angular/common';
 
@@ -12,9 +12,10 @@ export class CadastrarPacienteComponent implements OnInit {
 
   @Output() icone: string = 'person';
   @Output() title: string = 'Cadastrar Paciente';
-  form: FormGroup;
+  @Input() file: string = 'https://i.pinimg.com/474x/8d/ee/de/8deede6888af1f1be092c160e76a77f0.jpg';
+  form: UntypedFormGroup;
 
-  constructor(private formBuilder: FormBuilder, private snackBar: MatSnackBar, private location: Location) {
+  constructor(private formBuilder: UntypedFormBuilder, private snackBar: MatSnackBar, private location: Location) {
     this.form = this.formBuilder.group({
       nome: [''],
       cpf: [''],

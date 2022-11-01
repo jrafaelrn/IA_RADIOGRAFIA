@@ -1,5 +1,5 @@
 import { Component, OnInit, Output } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-cadastrar-diagnostico',
@@ -11,9 +11,9 @@ export class CadastrarDiagnosticoComponent implements OnInit {
   @Output() icone: string = 'description';
   @Output() title: string = 'Cadastrar Diagnóstico';
 
-  form: FormGroup;
+  form: UntypedFormGroup;
 
-  constructor(private formBuilder: FormBuilder) {
+  constructor(private formBuilder: UntypedFormBuilder) {
     this.form = this.formBuilder.group({
       cpf: [''],
       observacao: ['']

@@ -1,5 +1,5 @@
 import { Component, OnInit, Output } from '@angular/core';
-import { FormBuilder, FormGroup } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormGroup } from '@angular/forms';
 import { MatSnackBar } from '@angular/material/snack-bar';
 import { Location } from '@angular/common';
 import { Router } from '@angular/router';
@@ -13,9 +13,9 @@ export class AdicionarExameComponent implements OnInit {
 
   @Output() icone: string = 'assignment_add';
   @Output() title: string = 'Adicionar Exame';
-  form: FormGroup;
+  form: UntypedFormGroup;
 
-  constructor(private formBuilder: FormBuilder, private snackBar: MatSnackBar, private location: Location, private router: Router) {
+  constructor(private formBuilder: UntypedFormBuilder, private snackBar: MatSnackBar, private location: Location, private router: Router) {
     this.form = this.formBuilder.group({
       cpf: [''],
       caminho_img: ['']
