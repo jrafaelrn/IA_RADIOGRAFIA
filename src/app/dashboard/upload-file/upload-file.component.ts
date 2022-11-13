@@ -21,7 +21,7 @@ export class UploadFileComponent implements OnInit {
     const arquivoSelecionado: File = <File>event.target.files[0];
 
     if (arquivoSelecionado) {
-      //this.uploadArquivo(arquivoSelecionado);
+      this.uploadArquivo(arquivoSelecionado);
       console.log(arquivoSelecionado);
     }
   }
@@ -46,11 +46,6 @@ export class UploadFileComponent implements OnInit {
         }
       }
 
-        /*
-        res => { 
-          console.log(res);
-        }
-        */
       );
   }
 
