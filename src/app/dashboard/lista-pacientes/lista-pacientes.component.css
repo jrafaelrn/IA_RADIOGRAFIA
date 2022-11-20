@@ -14,3 +14,12 @@ mat-toolbar {
     justify-content: center;
     background: rgba(0, 0, 0, 0.15);
 }
+
+table th {
+    text-align: center;
+}
+
+table {
+    align-items: center;
+    text-align: center;
+}

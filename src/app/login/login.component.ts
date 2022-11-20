@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
-import { UntypedFormBuilder, UntypedFormGroup } from '@angular/forms';
+import { FormGroup, FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
+
+import { Login } from '../model/login';
 import { AuthService } from '../services/auth.service';
 import { ServiceService } from '../services/service.service';
 
@@ -13,11 +15,12 @@ import { ServiceService } from '../services/service.service';
 export class LoginComponent implements OnInit {
 
 
-  form: UntypedFormGroup;
+  form: FormGroup;
   contador: number = 0;
+  login = new Login();
 
   constructor(
-    private formBuilder: UntypedFormBuilder, 
+    private formBuilder: FormBuilder, 
     private auth: AuthService, 
     private service: ServiceService, 
     private router: Router) {
@@ -33,14 +36,12 @@ export class LoginComponent implements OnInit {
 
   public onSubmit(): void {
 
+    this.service.login(this.form.value.crm).subscribe(data => this.execute(data));
 
-    this.service.login(1).subscribe(data => {
-      console.log(data);
-      this.router.navigate(['dashboard']);
-    },
-      (error) => {
-        console.error(error);
-      });
+
+    this.service.salvarSessionStorage(this.login);
+    this.router.navigate(['dashboard']);
+
   }
 
   public trocaDeDiv() {
@@ -56,6 +57,14 @@ export class LoginComponent implements OnInit {
       this.trocaDeDiv();
     }, time);
   }
+
+  execute(login: any){
+    this.login = login;
+    this.service.salvarSessionStorage(this.login);
+    this.router.navigate(['dashboard']);
+  }
+
+ 
 
 
 

@@ -1,6 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
+import { Login } from 'src/app/model/login';
+import { ServiceService } from 'src/app/services/service.service';
+
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
@@ -8,30 +11,18 @@ import { Router } from '@angular/router';
 })
 export class DashboardComponent implements OnInit {
 
-  constructor(private router:Router) { }
+  login = new Login();
+
+  constructor(private router:Router, private service: ServiceService) {
+
+    this.login = this.service.usuarioLogado;
+  }
 
   ngOnInit(): void {}
 
 
   public onSubmit(){
-    /*
-    this.login = {
-      agencia: this.form.value.agencia,
-      conta: this.form.value.conta
-    }
-
-    this.service.salvarSessionStorage(this.login);
-
-    console.log(this.login);
     
-    this.service.login(this.login).subscribe(data => {
-      console.log(data);
-      this.router.navigate(['mostrar']);
-    },
-      (error) => {
-        console.error(error);
-      });
-      */
       this.router.navigate(['login']);
 
   }

@@ -4,8 +4,8 @@ import { delay, first, Observable, tap } from 'rxjs';
 
 import { Diagnosticos } from '../model/diagnostico';
 import { Exame } from '../model/exame';
+import { Login } from '../model/login';
 import { Pessoa } from '../model/pessoas';
-import { ResponseLogin } from '../model/ResponseLogin';
 import { AuthService } from './auth.service';
 
 @Injectable({
@@ -19,15 +19,25 @@ export class ServiceService {
 
   constructor(private httpClient: HttpClient, private authService: AuthService) { }
 
-  public login(request: number): Observable<ResponseLogin> {
-    const api = '../assets/response.json';//mudar
-    return this.httpClient.get<ResponseLogin>(api).pipe(
-      tap((loginResponse) => (this.authService.loginResponse = loginResponse))
+  public login(request: number): Observable<Login> {
+    const api = '/assets/login.json';
+    return this.httpClient.get<Login>(api).pipe(
+      tap((loginResponse) => (this.authService.login = loginResponse))
     );
   }
 
-  public salvarSessionStorage(crm: number){
-    sessionStorage.setItem("crm", JSON.stringify(crm));
+  public salvarSessionStorage(login: Login){
+    sessionStorage.setItem("crm", JSON.stringify(login));
+  }
+
+   logout() {
+    sessionStorage.clear();
+    delete sessionStorage["crm"];
+  }
+
+  public get usuarioLogado(): Login {
+    let usu = sessionStorage.getItem("crm");
+    return (usu ? JSON.parse(usu) : null);
   }
 
   public listPessoas() {

@@ -1,17 +1,20 @@
 [
   {
-    "id_exame": "1245as",
-    "cpf": "400207954",
-    "observacao": "Encontrado corpo estranho X"
+    "id": "1245as",
+    "data_criacao": "2022-11-15",
+    "cpf_medico": "400207954",
+    "descricao": "Encontrado corpo estranho X"
   },
   {
-    "id_exame": "1111as",
-    "cpf": "400207954",
-    "observacao": "Encontrado corpo estranho Y"
+    "id": "1111as",
+    "data_criacao": "2022-11-15",
+    "cpf_medico": "400207954",
+    "descricao": "Encontrado corpo estranho Y"
   },
   {
-    "id_exame": "1145as",
-    "cpf": "400207954",
-    "observacao": "Encontrado corpo estranho Z"
+    "id": "1145as",
+    "data_criacao": "2022-11-15",
+    "cpf_medico": "400207954",
+    "descricao": "Encontrado corpo estranho Z"
   }
 ]

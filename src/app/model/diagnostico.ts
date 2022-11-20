@@ -1,5 +1,6 @@
 export class Diagnosticos {
-    public id_exame: string = '';
-    public cpf: string = '';
-    public observacao: string = '';
+    public id: string = '';
+    public data_criacao: string = '';
+    public cpf_medico: string = '';
+    public descricao: string = '';
 }

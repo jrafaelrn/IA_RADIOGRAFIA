@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { ServiceService } from 'src/app/services/service.service';
 
 @Component({
   selector: 'app-header',
@@ -12,11 +13,16 @@ export class HeaderComponent implements OnInit {
   @Input() title: string = 'Home';
   
 
-  constructor(private router: Router) { }
+  constructor(private router: Router, private service: ServiceService) { }
 
   ngOnInit(): void {}
 
   public onSubmit(rota: string){
+
+     if(rota == 'login'){
+      this.service.logout();
+     }
+
       this.router.navigate([rota]);
   }
 

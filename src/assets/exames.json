@@ -1,17 +1,10 @@
 [
   {
-    "id_exame": "1245as",
-    "nome_img": "radiografia_helena",
-    "extensao": "png"
-  },
-  {
-    "id_exame": "1111as",
-    "nome_img": "radiografia_maria",
-    "extensao": "jpg"
-  },
-  {
-    "id_exame": "1145as",
-    "nome_img": "radiografia_mario",
-    "extensao": "jpg"
+    "id_radiografia": "1245as",
+    "data_criacao": "15/11/2022",
+    "deteccao": true,
+    "imagem": "http://www.decera.com/imagens/radiografias/radiografia_helena",
+    "id_diagnostico": "3",
+    "cpf_operador_raio_X": "123456789"
   }
 ]
