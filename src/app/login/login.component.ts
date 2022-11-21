@@ -3,7 +3,6 @@ import { FormGroup, FormBuilder } from '@angular/forms';
 import { Router } from '@angular/router';
 
 import { Login } from '../model/login';
-import { AuthService } from '../services/auth.service';
 import { ServiceService } from '../services/service.service';
 
 
@@ -21,7 +20,6 @@ export class LoginComponent implements OnInit {
 
   constructor(
     private formBuilder: FormBuilder, 
-    private auth: AuthService, 
     private service: ServiceService, 
     private router: Router) {
     this.form = this.formBuilder.group({

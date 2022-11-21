@@ -30,7 +30,7 @@ export class UploadFileComponent implements OnInit {
   private uploadArquivo(arquivoSelecionado: File) {
     const formData = new FormData();
     formData.append("foto", arquivoSelecionado);
-    this.httpClient.post(environment.url, formData, {
+    this.httpClient.post('', formData, {
 
       reportProgress: true,
       observe: 'events'

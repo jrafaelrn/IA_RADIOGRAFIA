@@ -9,11 +9,11 @@ const routes: Routes = [
   
   { 
     path: 'dashboard',
-    /*canActivate: [AuthGuardService],*/
+    canActivate: [AuthGuardService],
     loadChildren: () => import('./dashboard/dashboard.module').then(m => m.DashboardModule)
   },
 
-  {path: '',pathMatch: 'full', redirectTo: 'login'},
+  {path: '**',pathMatch: 'full', redirectTo: 'login'},
 ];
 
 @NgModule({

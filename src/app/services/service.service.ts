@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { delay, first, Observable, tap } from 'rxjs';
+import { environment } from 'src/environments/environment';
 
 import { Diagnosticos } from '../model/diagnostico';
 import { Exame } from '../model/exame';
@@ -21,7 +22,8 @@ export class ServiceService {
 
   public login(request: number): Observable<Login> {
     const api = '/assets/login.json';
-    return this.httpClient.get<Login>(api).pipe(
+    console.log(environment.medicoLogin+request)
+    return this.httpClient.get<Login>(environment.medicoLogin+request).pipe(
       tap((loginResponse) => (this.authService.login = loginResponse))
     );
   }
