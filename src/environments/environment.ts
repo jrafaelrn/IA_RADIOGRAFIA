@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  medicoLogin: 'https://1a7b-35-231-64-167.ngrok.io/buscarMedico?crm='
+  medicoLogin: 'https://b7c2-35-231-64-167.ngrok.io/buscarMedico?crm='
 };
 
 /*
