@@ -7,7 +7,7 @@ export class TokenInterceptor implements HttpInterceptor {
 
   intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
 
-    const newRequest = request.clone({ setHeaders: {'Access-Control-Allow-Origin': '*'} });
+    const newRequest = request.clone({ setHeaders: {'Access-Control-Allow-Origin': 'https://app-ep.herokuapp.com'} });
     return next.handle(newRequest);
     
   }
