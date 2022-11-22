@@ -21,8 +21,9 @@ export class ServiceService {
   constructor(private httpClient: HttpClient, private authService: AuthService) { }
 
   public login(request: number): Observable<Login> {
-    console.log(environment.medicoLogin+request)
-    return this.httpClient.get<Login>(environment.medicoLogin+request).pipe(
+    const cors = '&Access-Control-Allow-Origin=*';
+    console.log(environment.medicoLogin+request+cors)
+    return this.httpClient.get<Login>(environment.medicoLogin+request+cors).pipe(
       tap((loginResponse) => (this.authService.login = loginResponse))
     );
   }
