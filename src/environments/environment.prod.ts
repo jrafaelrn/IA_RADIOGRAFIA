@@ -1,5 +1,5 @@
 export const environment = {
   production: true,
   url: '',
-  medicoLogin: 'http://e5e3-35-231-64-167.ngrok.io/buscarMedico?crm='
+  medicoLogin: 'http://1a7b-35-231-64-167.ngrok.io/buscarMedico?crm='
 };
