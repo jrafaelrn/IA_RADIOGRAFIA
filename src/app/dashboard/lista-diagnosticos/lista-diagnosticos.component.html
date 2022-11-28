@@ -4,7 +4,7 @@
     <mat-card>
         <mat-toolbar> Diagnósticos Disponíveis</mat-toolbar>
 
-        <div *ngIf="diagnosticos$ | async as diagnosticos; else loading">
+        <div *ngIf="diagnosticos; else loading">
             <table mat-table [dataSource]="diagnosticos" class="mat-elevation-z8">
 
                 <ng-container matColumnDef="id">
@@ -13,13 +13,8 @@
                 </ng-container>
 
                 <ng-container matColumnDef="data_criacao">
-                    <th mat-header-cell *matHeaderCellDef> Data </th>
+                    <th mat-header-cell *matHeaderCellDef> Data de Criação </th>
                     <td mat-cell *matCellDef="let diagnostico"> {{ diagnostico.data_criacao }} </td>
-                </ng-container>
-
-                <ng-container matColumnDef="cpf_medico">
-                    <th mat-header-cell *matHeaderCellDef> CPF </th>
-                    <td mat-cell *matCellDef="let diagnostico"> {{ diagnostico.cpf_medico }} </td>
                 </ng-container>
 
                 <ng-container matColumnDef="descricao">
@@ -27,8 +22,8 @@
                     <td mat-cell *matCellDef="let diagnostico"> {{ diagnostico.descricao }} </td>
                 </ng-container>
 
-                <tr mat-header-row *matHeaderRowDef="['id','data_criacao', 'cpf_medico', 'descricao']"></tr>
-                <tr mat-row *matRowDef="let diagnostico; columns: ['id','data_criacao', 'cpf_medico', 'descricao']"></tr>
+                <tr mat-header-row *matHeaderRowDef="['id','data_criacao', 'descricao']"></tr>
+                <tr mat-row *matRowDef="let diagnostico; columns: ['id','data_criacao', 'descricao']"></tr>
             </table>
         </div>
 

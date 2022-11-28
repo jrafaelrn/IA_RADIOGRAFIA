@@ -23,7 +23,7 @@ export class LoginComponent implements OnInit {
     private service: ServiceService, 
     private router: Router) {
     this.form = this.formBuilder.group({
-      crm: ['']
+      cpf: ['']
     });
 
     this.tempoRotacaoImagem();
@@ -34,7 +34,7 @@ export class LoginComponent implements OnInit {
 
   public onSubmit(): void {
 
-    this.service.login(this.form.value.crm).subscribe(data => this.execute(data));
+    this.service.login(this.form.value.cpf).subscribe(data => this.execute(data));
 
 
     this.service.salvarSessionStorage(this.login);

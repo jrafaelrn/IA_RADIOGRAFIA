@@ -3,13 +3,17 @@
 <body>
     <mat-card>
         <mat-toolbar> Exames Disponíveis</mat-toolbar>
-        <div *ngIf="exames$ | async as exames; else loading">
-            <table mat-table [dataSource]="exames" class="mat-elevation-z8">
+        
+        <div *ngIf="radiografias; else loading" class="table">
+            <table mat-table [dataSource]="radiografias" class="mat-elevation-z8">
 
-                <ng-container matColumnDef="id_radiografia">
+                <ng-container matColumnDef="id">
                     <th mat-header-cell *matHeaderCellDef> Id </th>
-                    <td mat-cell *matCellDef="let exame"> {{ exame.id_radiografia }} </td>
+                    <td mat-cell *matCellDef="let exame"> 
+                    <button *ngIf="exame.id_diagnostico == undefined" mat-raised-button color="primary" (click)="onButton(exame.id)">diagnóstico</button>
+                    {{ exame.id }} </td>
                 </ng-container>
+
 
                 <ng-container matColumnDef="data_criacao">
                     <th mat-header-cell *matHeaderCellDef> Data </th>
@@ -18,16 +22,18 @@
 
                 <ng-container matColumnDef="deteccao">
                     <th mat-header-cell *matHeaderCellDef> Detecção </th>
-                    <td mat-cell *matCellDef="let exame"> {{ exame.deteccao }} </td>
+                    <td mat-cell *matCellDef="let exame"><mat-icon *ngIf="exame.deteccao == false">close</mat-icon>
+                        <mat-icon *ngIf="exame.deteccao == true">done</mat-icon>
+                    </td>
                 </ng-container>
 
-                <ng-container matColumnDef="imagem">
-                    <th mat-header-cell *matHeaderCellDef> Imagem </th>
-                    <td mat-cell *matCellDef="let exame"> {{ exame.imagem }} </td>
+                <ng-container matColumnDef="cpf_operador">
+                    <th mat-header-cell *matHeaderCellDef> CPF do Operador </th>
+                    <td mat-cell *matCellDef="let exame"> {{ exame.cpf_operador }} </td>
                 </ng-container>
 
-                <tr mat-header-row *matHeaderRowDef="['id_radiografia','data_criacao', 'deteccao', 'imagem']"></tr>
-                <tr mat-row *matRowDef="let diagnostico; columns: ['id_radiografia','data_criacao', 'deteccao', 'imagem']"></tr>
+                <tr mat-header-row *matHeaderRowDef="['id','data_criacao', 'deteccao', 'cpf_operador']"></tr>
+                <tr mat-row *matRowDef="let diagnostico; columns: ['id','data_criacao', 'deteccao', 'cpf_operador']"></tr>
             </table>
         </div>
 

@@ -1,6 +1,7 @@
 body {
     display: flex;
-    align-items: flex-start;
+    align-items: center;
+    justify-content: center;
 }
 
 mat-form-field {
@@ -9,22 +10,7 @@ mat-form-field {
 
 mat-card {
     max-width: 80%;
-    margin: 2em auto;
+    margin: 1em auto;
     text-align: center;
-}
-
-.div_foto {
-    margin: 1%;
-    text-align: center;
-}
-
-.foto {
-    border: 1px solid;
-    height: 300px;
-    width: 200px;
-}
-
-.div_foto button {
-    border: 1px solid;
-    margin-top: 1%;
+    margin-bottom: 40vh;
 }

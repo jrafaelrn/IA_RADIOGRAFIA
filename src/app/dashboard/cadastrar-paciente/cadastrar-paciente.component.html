@@ -1,12 +1,6 @@
 <app-header [icone]='icone' [title]='title'></app-header>
 
 <body>
-    <div class="div_foto">
-        <div class="foto"
-            style="background-image: url('{{ file }}')">
-        </div>
-        <app-upload-file></app-upload-file>    
-    </div>
     <div class="form">
         <mat-card>
             <mat-card-content>
@@ -23,17 +17,14 @@
                             formControlName="endereco">
                     </mat-form-field>
                     <mat-form-field>
-                        <input matInput type="number" placeholder="Digite o número da residência"
-                            formControlName="numero">
-                    </mat-form-field>
-                    <mat-form-field>
-                        <input matInput type="tel" placeholder="(11) 99999-9999" formControlName="telefone" mask="(00) 00000-0000">
+                        <input matInput type="text" placeholder="Digite a data de nascimento"
+                            formControlName="data_nascimento">
                     </mat-form-field>
                     <mat-form-field>
                         <mat-label>sexo</mat-label>
                         <mat-select formControlName="sexo">
-                            <mat-option value="masculino">masculino</mat-option>
-                            <mat-option value="feminino">feminino</mat-option>
+                            <mat-option value="M">M</mat-option>
+                            <mat-option value="F">F</mat-option>
                         </mat-select>
                     </mat-form-field>
                 </form>

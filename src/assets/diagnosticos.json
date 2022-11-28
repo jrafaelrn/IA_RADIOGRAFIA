@@ -1,20 +1,8 @@
-[
-  {
-    "id": "1245as",
-    "data_criacao": "2022-11-15",
-    "cpf_medico": "400207954",
-    "descricao": "Encontrado corpo estranho X"
-  },
-  {
-    "id": "1111as",
-    "data_criacao": "2022-11-15",
-    "cpf_medico": "400207954",
-    "descricao": "Encontrado corpo estranho Y"
-  },
-  {
-    "id": "1145as",
-    "data_criacao": "2022-11-15",
-    "cpf_medico": "400207954",
-    "descricao": "Encontrado corpo estranho Z"
-  }
-]
+{
+  "diagnosticos": [
+    {
+      "data_criacao": "20/11/2022", 
+      "id": 5
+    }
+  ]
+}

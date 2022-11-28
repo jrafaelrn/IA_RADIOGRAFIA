@@ -11,11 +11,9 @@ import { ServiceService } from 'src/app/services/service.service';
 })
 export class DashboardComponent implements OnInit {
 
-  login = new Login();
 
-  constructor(private router:Router, private service: ServiceService) {
+  constructor(private router:Router, public service: ServiceService) {
 
-    this.login = this.service.usuarioLogado;
   }
 
   ngOnInit(): void {}

@@ -4,7 +4,8 @@
 
 export const environment = {
   production: false,
-  medicoLogin: 'https://0aa4-35-231-64-167.ngrok.io/buscarMedico?crm='
+  medicoLogin: '/buscarMedico?cpf=',
+  upload: '/cadastrarRadiografia'
 };
 
 /*

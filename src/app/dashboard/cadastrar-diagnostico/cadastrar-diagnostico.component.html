@@ -5,23 +5,22 @@
         <mat-card>
             <mat-card-content>
                 <form [formGroup]="form">
-                    <mat-form-field>
-                        <input matInput type="text" placeholder="Digite o CPF do paciente" formControlName="cpf" mask="000.000.000-00">
-                    </mat-form-field>
                     <mat-form-field appearance="fill">
                         <mat-label>Descrição</mat-label>
                         <textarea matInput formControlName="descricao"></textarea>
-                      </mat-form-field>
+                    </mat-form-field>
                 </form>
             </mat-card-content>
             <mat-card-actions>
-                <button mat-raised-button color="primary" (click)="onEnviarEmail()">Enviar por e-mail</button>
+                <button mat-raised-button color="primary" (click)="onSubmit()">Cadastrar</button>
             </mat-card-actions>
         </mat-card>
     </div>
-        <div class="foto_diag"
-            style="background-image: url('../../../assets/radio2.png')">
-        </div>
+       
+     <img src='{{ file }}'>
+        
 </body>
+
+
 
 <app-footer></app-footer>

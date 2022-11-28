@@ -1,4 +1,5 @@
 export class Login {
     public crm: string = '';
-    public nome: string = '';
+    public medico: string = '';
+    public cpf: string = '';
 }

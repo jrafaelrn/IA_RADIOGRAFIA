@@ -1,10 +1,13 @@
+{
+  "radiografias":
 [
   {
     "id_radiografia": "1245as",
     "data_criacao": "15/11/2022",
     "deteccao": true,
-    "imagem": "http://www.decera.com/imagens/radiografias/radiografia_helena",
+    "imagem": "http://www.decera.com/imagens/radiografias/radiografia_helena.png",
     "id_diagnostico": "3",
     "cpf_operador_raio_X": "123456789"
   }
 ]
+}

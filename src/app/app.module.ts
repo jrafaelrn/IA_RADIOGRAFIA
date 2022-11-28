@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -9,8 +9,9 @@ import { LoginComponent } from './login/login.component';
 import { SharedModule } from './shared/SharedModule';
 import { AppMaterialModule } from './shared/app-material/app-material.module';
 import { DashboardModule } from './dashboard/dashboard.module';
-import { TokenInterceptor } from './interceptors/token.interceptors';
+import { NgxMaskModule, IConfig  } from 'ngx-mask';
 
+export const options: Partial<null|IConfig> | (() => Partial<IConfig>) = null;
 
 @NgModule({
   declarations: [
@@ -24,10 +25,11 @@ import { TokenInterceptor } from './interceptors/token.interceptors';
     HttpClientModule,
     SharedModule,
     AppMaterialModule,
-    DashboardModule
+    DashboardModule,
+    NgxMaskModule.forRoot(),
+
   ],
   providers: [
-    { provide: HTTP_INTERCEPTORS, useClass: TokenInterceptor, multi: true }
   ],
   bootstrap: [AppComponent]
 })

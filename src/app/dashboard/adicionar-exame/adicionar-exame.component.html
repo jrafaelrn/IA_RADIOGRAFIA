@@ -5,9 +5,31 @@
             <mat-card-content>
                 <form [formGroup]="form">
                     <mat-form-field>
-                        <input matInput type="text" placeholder="Digite o CPF do paciente" formControlName="cpf" mask="000.000.000-00">
+                        <input matInput type="text" placeholder="Digite o CPF do paciente" formControlName="cpf_paciente" mask="000.000.000-00">
                     </mat-form-field>
-                    <app-upload-file></app-upload-file>    
+
+                    <mat-form-field>
+                        <input matInput type="number" placeholder="Digite o id do Hospital" formControlName="id_hospital">
+                    </mat-form-field>
+
+                    <mat-form-field>
+                        <input matInput type="text" placeholder="Digite o CPF do Operador de Raio X" formControlName="cpf_operador" mask="000.000.000-00">
+                    </mat-form-field>
+
+                    <input type="file" style="display: none" (change)="onFileSelected($event)" #fileUpload>
+
+                    <div class="file-upload" align="center">
+                    
+                        <p *ngIf="mensagem" style="font-size: 12px"> {{ mensagem }}</p>
+                    
+                        <p style="font-size: 12px">
+                            {{nomeArquivo || 'Nenhum arquivo selecionado.'}}
+                        </p>
+                    
+                        <button mat-mini-fab color="primary" (click)="fileUpload.click()">
+                            <span class="material-icons">upload_file</span>
+                        </button>
+                    </div>                
                 </form>
             </mat-card-content>
 

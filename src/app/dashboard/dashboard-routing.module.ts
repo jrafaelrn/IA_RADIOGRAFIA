@@ -8,13 +8,11 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ListaDiagnosticosComponent } from './lista-diagnosticos/lista-diagnosticos.component';
 import { ListaExamesComponent } from './lista-exames/lista-exames.component';
 import { ListaPacientesComponent } from './lista-pacientes/lista-pacientes.component';
-import { ResultadoComponent } from './resultado/resultado.component';
 
 
 
 const routes: Routes = [
   {path: '', component: DashboardComponent},
-  {path: 'resultado', component: ResultadoComponent},
   {path: 'adicionar-exame', component: AdicionarExameComponent},
   {path: 'lista-pacientes', component: ListaPacientesComponent},
   {path: 'lista-exames', component: ListaExamesComponent},

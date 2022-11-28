@@ -3,6 +3,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { catchError, Observable, of } from 'rxjs';
 
 import { Diagnosticos } from 'src/app/model/diagnostico';
+import { Diagnosticojson } from 'src/app/model/diagnosticos';
 import { ServiceService } from 'src/app/services/service.service';
 import { ErrorDialogComponent } from 'src/app/shared/components/error-dialog/error-dialog.component';
 
@@ -15,16 +16,11 @@ export class ListaDiagnosticosComponent implements OnInit {
 
   @Output() icone: string = 'list';
   @Output() title: string = 'Listagem de Diagnósticos';
-  diagnosticos$: Observable<Diagnosticos[]>;
+  diagnosticos: any;
 
   constructor(private serviceService: ServiceService, private dialog: MatDialog) {
-    this.diagnosticos$ = serviceService.listDiagnosticos()
-    .pipe(
-      catchError(error => {
-      this.onError('Erro ao carregar diagnósticos.');
-      return of ([])
-    })
-    );
+    this.serviceService.listDiagnosticos().subscribe(res => this.diagnosticos = res.diagnosticos)
+    
    }
 
   ngOnInit(): void {}
