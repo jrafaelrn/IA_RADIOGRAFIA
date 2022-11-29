@@ -6,6 +6,7 @@
     height: 15vh;
 }
 
+
 .img_logo img {
     max-height: 40px;
 }
@@ -17,30 +18,33 @@
 
 
 .body {
-    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
 
 .body h2 {
     position: absolute;
     right: 0%;
-    top: 10%;
+    top: 50%;
     left: 0%;
     bottom: 0;
     color: #231d19;
     font-family: "ItauDisplay-XBold", "Myriad Pro", Arial;
     font-weight: bold;
     font-style: italic;
+    font-size: 150%;
+    
 }
 
 .body .vitrine img {
     border-radius: 3px;
     position: absolute;
     right: 0%;
-    top: 10%;
-    left: 50%;
+    top: 20%;
+    left: 45%;
     bottom: 0;
-    height: 70%;
-    width: 20%;
 }
 
 .form {
@@ -59,39 +63,14 @@
 }
 
 
-
-
-.footer {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    margin-top: 5%;
-}
-
-.footer_text {
-    margin-top: 5%;
-}
-
-
 .vitrine {
     padding-bottom: 30%;
     border: white;
     background-repeat: no-repeat;
 }
 
-.footer a {
-    text-align: center;
-}
-
-.footer a img{
-    border-radius: 3px;
-    height: 70%;
-    width: 70%;
-}
-
 
 h2 {
-    font-size: 150%;
     line-height: 100%;
     font-family: "ItauDisplay-XBold", "Myriad Pro", Arial;
     margin-bottom: 8px;
@@ -100,4 +79,9 @@ h2 {
 
 .button {
     margin-left: 5%;
+}
+
+.vitrine .img {
+    height: 50vh;
+    width: 50vw;
 }

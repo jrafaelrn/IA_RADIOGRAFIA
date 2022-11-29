@@ -68,6 +68,10 @@ body {
     margin-right: 12%;
 }
 
+.mat-typography #texto {
+    font-size: 10px;
+}
+
 
 
 
@@ -83,6 +87,10 @@ body {
 
     .mat-typography .form {
         margin-right: 0%;
+    }
+
+    .mat-typography #texto {
+        font-size: 16px;
     }
 
 }
@@ -122,6 +130,10 @@ body {
         width: 100%;
     }
 
+    .mat-typography #texto {
+        font-size: 22px;
+    }
+
 }
 
 
@@ -145,6 +157,10 @@ body {
         width: 100%;
     }
 
+    .mat-typography #texto {
+        font-size: 26px;
+    }
+
 }
 
 /*1200px e + = telas maiores, tvs*/
@@ -164,6 +180,10 @@ body {
     .mat-typography .img_responsivo {
         height: 100%;
         width: 100%;
+    }
+
+    .mat-typography #texto {
+        font-size: 30px;
     }
     
 }
